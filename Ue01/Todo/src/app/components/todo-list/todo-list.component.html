@@ -1,0 +1,24 @@
+<h1>TODO-Liste</h1>
+
+<table class="ui celled striped table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Beschreibung</th>
+            <th>Author</th>
+            <th>Kategorie</th>
+            <th>Datum</th>
+            <th>Erledigt</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todo of list">
+            <td>{{todo.title}}</td>
+            <td>{{todo.description}}</td>
+            <td>{{todo.author}}</td>
+            <td>{{todo.category}}</td>
+            <td>{{todo.dateTime | date}}</td>
+            <td><i class="large green checkmark icon" *ngIf="todo.done"></i></td>
+        </tr>
+    </tbody>
+</table>
